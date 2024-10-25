@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import Selected from './Selected'; // Import the Selected component
+import Selected from './Selected';
+import ModalClose from './ModalClose'; // Import the ModalClose component
+import Modal from './Modal'; // Import the Modal component
 
 const Available = () => {
     const [allPlayers, setAllPlayers] = useState([]);
@@ -19,13 +21,16 @@ const Available = () => {
     const handleSelectPlayer = (player) => {
         if (!selectedPlayers.includes(player)) {
             setSelectedPlayers([...selectedPlayers, player]);
-            setSelectModalOpen(true); // Open select modal
+            setSelectModalOpen(true);
+            setTimeout(() => {
+                setSelectModalOpen(false);
+            }, 2000);
         }
     };
 
     const handleDeletePlayer = (index) => {
         setPlayerToDelete(index);
-        setDeleteModalOpen(true); // Open delete confirmation modal
+        setDeleteModalOpen(true);
     };
 
     const confirmDeletePlayer = () => {
@@ -84,7 +89,6 @@ const Available = () => {
                                     Choose Player
                                 </button>
                             </div>
-                            
                         </div>
                     ))
                 ) : (
@@ -94,23 +98,15 @@ const Available = () => {
 
             {/* Select Modal */}
             {isSelectModalOpen && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white p-5 rounded">
-                        <h3>Player Selected</h3>
-                        <button onClick={() => setSelectModalOpen(false)} className="mt-3 border p-2 rounded">Close</button>
-                    </div>
-                </div>
+                <Modal isOpen={isSelectModalOpen} onClose={() => setSelectModalOpen(false)} />
             )}
 
             {/* Delete Confirmation Modal */}
             {isDeleteModalOpen && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white p-5 rounded">
-                        <h3>Are you sure you want to delete this player?</h3>
-                        <button onClick={confirmDeletePlayer} className="mt-3 border p-2 rounded">Yes</button>
-                        <button onClick={() => setDeleteModalOpen(false)} className="mt-3 border p-2 rounded">No</button>
-                    </div>
-                </div>
+                <ModalClose 
+                    onConfirm={confirmDeletePlayer}
+                    onCancel={() => setDeleteModalOpen(false)} 
+                />
             )}
         </div>
     );
