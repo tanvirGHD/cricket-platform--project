@@ -1,0 +1,51 @@
+[
+    {
+      "player_image": "https://i.ibb.co/6y85TWg/images-2.jpg",
+      "player_name": "Player 1",
+      "batting_style": "Right-Hand Bat",
+      "bowling_style": "Right-Arm Off Spin",
+      "price": "$1200000",
+      "country": "Bangladesh"
+    },
+    {
+      "player_image": "https://i.ibb.co/g7pGJH5/images-1.jpg",
+      "player_name": "Player 2",
+      "batting_style": "Left-Hand Bat",
+      "bowling_style": "Right-Arm Medium",
+      "price": "$1300000",
+      "country": "Bangladesh"
+    },
+    {
+      "player_image": "https://i.ibb.co/Pmzb27x/images.jpg",
+      "player_name": "Player 3",
+      "batting_style": "Right-Hand Bat",
+      "bowling_style": "Left-Arm Spin",
+      "price": "$1500000",
+      "country": "Bangladesh"
+    },
+    {
+      "player_image": "https://i.ibb.co/nnMhfYh/download-3.jpg",
+      "player_name": "Player 4",
+      "batting_style": "Left-Hand Bat",
+      "bowling_style": "Right-Arm Fast",
+      "price": "$1100000",
+      "country": "Bangladesh"
+    },
+    {
+      "player_image": "https://i.ibb.co/ZMNK9LX/download-2.jpg",
+      "player_name": "Player 5",
+      "batting_style": "Right-Hand Bat",
+      "bowling_style": "Right-Arm Fast",
+      "price": "$1400000",
+      "country": "Bangladesh"
+    },
+    {
+      "player_image": "https://i.ibb.co/z6jpjdb/download.jpg",
+      "player_name": "Player 6",
+      "batting_style": "Left-Hand Bat",
+      "bowling_style": "Left-Arm Medium",
+      "price": "$1350000",
+      "country": "Bangladesh"
+    }
+  ]
+  

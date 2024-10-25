@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 import './Banner.css'
 
-const Banner = () => {
+const Banner = ({ claimHandleToCoin }) => {
     return (
         <div className='w-11/12 mx-auto'>
         <div
@@ -14,12 +16,17 @@ const Banner = () => {
             <div className='flex justify-center'><img src="assets/banner-main.png"></img></div>
             <p className='text-4xl font-bold'>Assemble Your Ultimate Dream 11 Cricket Team</p>
             <p className='font-bold text-2xl text-gray-500'>Beyond Boundaries Beyond Limits</p>
-            <button className="btn bg-green-900 text-white text-lg hover:text-black">Claim Free Credit</button>
+            <button onClick={claimHandleToCoin}  className="btn bg-green-900 text-white text-lg hover:text-black">Claim Free Credit</button>
+            
             </div>
         </div>
         </div>
         </div>
     );
 };
+
+Banner.propTypes= {
+    claimHandleToCoin: PropTypes.func
+}
 
 export default Banner;

@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({coin}) => {
     return (
         <div className='w-11/12 mx-auto'>
         <div className="navbar bg-base-100">
@@ -42,7 +44,7 @@ const Navbar = () => {
             </ul>
         </div>
             <div className='flex items-center gap-2 border rounded-lg p-2 font-bold'>
-            <div><span>0</span> Coin</div>
+            <div><span>{coin} </span>Coin</div>
             <div><i className="fa-solid fa-circle-dollar-to-slot"></i></div>
             </div>
         </div>
@@ -50,5 +52,9 @@ const Navbar = () => {
         </div>
     );
 };
+
+Navbar.propTypes = {
+    coin: PropTypes.number.isRequired,
+    };
 
 export default Navbar;
