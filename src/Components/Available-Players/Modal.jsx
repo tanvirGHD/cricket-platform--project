@@ -26,12 +26,16 @@ const Modal = ({ isOpen, onClose }) => {
             {isOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <div className="bg-white p-5 rounded">
+                        <div className="flex gap-4 items-center ">
+                        <i className="fa-solid fa-circle-check text-green-600"></i>
                         <h3 className="text-center">Player Selected</h3>
-                        <span className="countdown font-mono text-6xl">{counter}</span>
+                        </div>
+                        {/* <span className="countdown font-mono text-6xl">{counter}</span> */}
                         <button onClick={onClose} className="mt-3 border p-2 rounded">
                             Close
                         </button>
-                        <progress className="progress w-56" value={counter} max={2}></progress>
+                        <div><progress className="progress w-56"></progress></div>
+                        {/* <progress className="progress w-56" value={counter} max={2}></progress> */}
                     </div>
                 </div>
             )}
@@ -40,3 +44,4 @@ const Modal = ({ isOpen, onClose }) => {
 };
 
 export default Modal;
+

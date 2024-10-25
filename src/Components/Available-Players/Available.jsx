@@ -42,7 +42,11 @@ const Available = () => {
     return (
         <div className="w-11/12 mx-auto my-10">
             <div className="flex justify-between items-center mb-5">
-                <div><p>Available Players</p></div>
+                <div>
+                    <p className='text-2xl font-bold'>
+                        Available Players: {allPlayers.length - selectedPlayers.length}/6
+                    </p>
+                </div>
                 <div>
                     <button 
                         className={`p-2 border rounded-l-xl ${showAvailable ? 'bg-blue-500 text-white' : ''}`} 
