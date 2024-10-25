@@ -3,6 +3,9 @@ import './App.css';
 import Available from './Components/Available-Players/Available';
 import Banner from './Components/Banner/Banner';
 import Navbar from './Components/Header/Navbar';
+import Footer from './Components/Footer/Footer';
+// import MainFooter from './Components/Footer/MainFooter';
+
 
 function App() {
   const [coin, setCoin] = useState(0);
@@ -17,6 +20,9 @@ function App() {
       <Navbar coin={coin} />
       <Banner claimHandleToCoin={claimHandleToCoin} />
       <Available coin={coin} setCoin={setCoin} />
+      <Footer></Footer>
+      {/* <MainFooter></MainFooter> */}
+      
     </>
   );
 }
