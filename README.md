@@ -1,15 +1,15 @@
 
 # Cricket Platform - Buy & Manage Your Favorite Cricket Players
-## Live link: 
+## Live link: https://relaxed-creponne-22861f.netlify.app/
 
 ## Description:
 Cricket Platform offers an exciting player marketplace where fans can buy, manage, and build their dream cricket team. From selecting top players to strategizing for matches, Cricket Platform provides the ultimate experience for every cricket enthusiast.
 
 ## Technologies Used
-Html
-TailwindCSS
-JavaScript
-React
+Html, 
+TailwindCSS, 
+JavaScript, 
+React, 
 API
 
 ## 3 key features in project
