@@ -21,7 +21,6 @@ function App() {
         <Banner claimHandleToCoin={claimHandleToCoin} /> {/* Pass function to Banner */}
         <Available claimHandleToCoin={claimHandleToCoin} coin={coin} setCoin={setCoin} /> {/* Pass coin and setCoin to Available */}
         <Footer />
-        {/* Uncomment MainFooter if needed */}
         <MainFooter />
       </>
     );

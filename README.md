@@ -1,11 +1,23 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Cricket Platform - Buy & Manage Your Favorite Cricket Players
+## Live link: 
 
-Currently, two official plugins are available:
+## Description:
+Cricket Platform offers an exciting player marketplace where fans can buy, manage, and build their dream cricket team. From selecting top players to strategizing for matches, Cricket Platform provides the ultimate experience for every cricket enthusiast.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+Html
+TailwindCSS
+JavaScript
+React
+API
+
+## 3 key features in project
+Player Marketplace
+Team Management
+Player Price
+
+
 
 
 

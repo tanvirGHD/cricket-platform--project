@@ -1,12 +1,12 @@
 const MainFooter = () => {
     return (
-        <div className="">
-                        {/* Footer Content */}
-                        <div className="bg-[#06091A] mt-40 pt-44">
-                <div className="footer flex justify-around text-white px-10 pb-5">
+        <div >
+                {/* Footer Content */}
+                    <div className="bg-[#06091A] mt-40 pt-44">
+                <div className="footer md::flex justify-around text-white px-10 pb-5">
                     {/* About Us Section */}
                     <div>
-                        <h6 className="text-lg font-semibold  mt-36">About Us</h6>
+                        <h6 className="text-lg font-semibold  md:mt-36">About Us</h6>
                         <p className="mt-3 text-gray-400 max-w-xs">
                             We are a passionate team dedicated to providing the best services to our customers.
                         </p>
@@ -26,7 +26,7 @@ const MainFooter = () => {
 
                     {/* Newsletter Subscribe Section */}
                     <form>
-                        <h6 className="text-lg font-semibold mt-36">Subscribe</h6>
+                        <h6 className="text-lg font-semibold md:mt-36">Subscribe</h6>
                         <p className="mt-3 text-gray-400">Subscribe to our newsletter for the latest updates.</p>
                         <fieldset className="form-control mt-3">
                             <div className="flex">

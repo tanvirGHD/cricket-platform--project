@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import './Banner.css';
+
 
 const Banner = ({ claimHandleToCoin }) => {
     const [showProgress, setShowProgress] = useState(false);
 
     const handleClick = () => {
-        setShowProgress(true); // Show progress bar
+        setShowProgress(true); 
 
-        // Add coins after 2 seconds
+        
         setTimeout(() => {
-            claimHandleToCoin(); // Add coins to the account
+            claimHandleToCoin(); 
         }, 2000);
 
-        // Hide progress bar after 3 seconds
+       
         setTimeout(() => {
             setShowProgress(false);
         }, 2000);

@@ -1,23 +1,24 @@
 import { useState, useEffect } from "react";
 
 const Modal = ({ isOpen, onClose }) => {
-    const [counter, setCounter] = useState(2); // Initialize counter to 2 seconds
+    const [counter, setCounter] = useState(2); 
+
 
     useEffect(() => {
         if (isOpen) {
-            setCounter(2); // Reset counter when modal opens
+            setCounter(2); 
             const timer = setInterval(() => {
                 setCounter((prev) => {
                     if (prev <= 1) {
                         clearInterval(timer);
-                        onClose(); // Close modal when counter reaches 0
+                        onClose(); 
                         return 0;
                     }
-                    return prev - 1; // Decrease counter
+                    return prev - 1;
                 });
-            }, 1000); // Update counter every second
+            }, 1000);
 
-            return () => clearInterval(timer); // Clean up interval on unmount
+            return () => clearInterval(timer); 
         }
     }, [isOpen, onClose]);
 
@@ -28,16 +29,12 @@ const Modal = ({ isOpen, onClose }) => {
                     <div className="bg-white p-5 rounded">
                         <div className="flex gap-4 items-center ">
                         <i className="fa-solid fa-circle-check text-green-600"></i>
-                        <h3 className="text-center">Player Selected</h3>
+                        <h3 className="text-center">Congratulations!! has been selected.</h3>
                         </div>
-                        {/* <span className="countdown font-mono text-6xl">{counter}</span> */}
                         <div className="flex items-center gap-2">
-                        {/* <button onClick={onClose} className="border p-1 rounded">
-                            Close
-                        </button> */}
-                        <div><progress className="progress w-56 text-green-700"></progress></div>
+                        <div><progress className="progress w-80 text-green-700"></progress></div>
                         </div>
-                        {/* <progress className="progress w-56" value={counter} max={2}></progress> */}
+                        
                     </div>
                 </div>
             )}

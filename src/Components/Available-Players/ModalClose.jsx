@@ -1,41 +1,36 @@
 import { useState, useEffect } from "react";
 
-const ModalClose = ({ onConfirm, onCancel }) => {
-    const [counter, setCounter] = useState(2); // Initialize counter to 2 seconds
+const ModalClose = ({ onConfirm }) => {
+    const [counter, setCounter] = useState(2); 
 
     useEffect(() => {
-        setCounter(2); // Reset counter when modal opens
+        setCounter(2); 
         const timer = setInterval(() => {
             setCounter((prev) => {
                 if (prev <= 1) {
                     clearInterval(timer);
-                    onConfirm(); // Automatically confirm and delete when counter reaches 0
+                    onConfirm(); 
                     return 0;
                 }
-                return prev - 1; // Decrease counter
+                return prev - 1; 
             });
-        }, 1000); // Update counter every second
+        }, 1000); 
 
-        return () => clearInterval(timer); // Clean up interval on unmount
+        return () => clearInterval(timer); 
     }, [onConfirm]);
 
     return (
         <>
-            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="fixed w-11/12 inset-0 flex items-center justify-center bg-black bg-opacity-50">
                 <div className="bg-white p-5 rounded">
-                    <h3 className="text-center">Are you sure you want to delete this player?</h3>
-                    {/* <div className="countdown font-mono text-6xl text-center">{counter}</div> */}
                     <div className="flex justify-around mt-5">
                     <div className="flex gap-4 items-center ">
                         <i className="fa-solid fa-circle-check text-red-600"></i>
-                        <h3 className="text-center">Player Deleted</h3>
+                        <h3 className="text-center">Player Removed</h3>
                         </div>
                     </div>
                     <div className="flex items-center gap-1">
-                    {/* <button onClick={onCancel} className="mt-3 border p-2 rounded">
-                    Close
-                    </button> */}
-                    <progress className="progress w-56 mt-3" ></progress>
+                    <progress className="progress w-80 mt-3" ></progress>
                     </div>
                 </div>
             </div>

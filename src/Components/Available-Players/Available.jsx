@@ -3,7 +3,7 @@ import Selected from './Selected';
 import ModalClose from './ModalClose'; // Import the ModalClose component
 import Modal from './Modal'; // Import the Modal component
 
-const Available = ({ claimHandleToCoin }) => {
+const Available = () => {
     const [allPlayers, setAllPlayers] = useState([]);
     const [selectedPlayers, setSelectedPlayers] = useState([]);
     const [showAvailable, setShowAvailable] = useState(true);
@@ -43,6 +43,7 @@ const Available = ({ claimHandleToCoin }) => {
         setShowAvailable(true);
     };
 
+
     return (
         <div className="w-11/12 mx-auto my-10">
             <div className="flex justify-between items-center mb-5">
@@ -51,22 +52,25 @@ const Available = ({ claimHandleToCoin }) => {
                         Available Players: {allPlayers.length - selectedPlayers.length}/6
                     </p>
                 </div>
-                <div>
+                <div className='flex'>
                     <button 
-                        className={`p-2 border rounded-l-xl ${showAvailable ? 'bg-gradient-to-r from-yellow-400 to-pink-500 text-white' : ''}`} 
+                        className={`md:p-2 border rounded-l-xl ${showAvailable ? 'bg-gradient-to-r from-yellow-400 to-pink-500 text-white' : ''}`} 
                         onClick={handleAvailableClick}
                     >
                         Available
                     </button>
+                    
                     <button 
-                        className={`p-2 border rounded-r-xl ${!showAvailable ? 'bg-gradient-to-r from-yellow-400 to-pink-500 text-white' : ''}`} 
+                        className={`md:p-2 border rounded-r-xl ${!showAvailable ? 'bg-gradient-to-r from-yellow-400 to-pink-500 text-white' : ''}`} 
                         onClick={() => setShowAvailable(false)}
                     >
                         Selected (<span>{selectedPlayers.length}</span>)
                     </button>
                 </div>
+                
             </div>
-
+           
+           
             <div className="grid md:grid-cols-3 gap-4">
                 {showAvailable ? (
                     allPlayers.map((player, index) => (
@@ -104,6 +108,13 @@ const Available = ({ claimHandleToCoin }) => {
                     <Selected selectedPlayers={selectedPlayers} handleDeletePlayer={handleDeletePlayer} />
                 )}
             </div>
+            <button 
+                className={`p-2  rounded-l-xl ${showAvailable ?  'text-white' :  'bg-gradient-to-r from-yellow-400 to-pink-500 text-white'}`} 
+                onClick={handleAvailableClick}
+                >
+                    Add More Player
+            </button>
+
 
             {/* Select Modal */}
             {isSelectModalOpen && (
@@ -121,7 +132,14 @@ const Available = ({ claimHandleToCoin }) => {
     );
 };
 
+
+
 export default Available;
+
+
+
+
+
 
 
 
