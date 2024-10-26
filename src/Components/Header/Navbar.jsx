@@ -4,8 +4,8 @@ import './Navbar.css'
 
 const Navbar = ({coin}) => {
     return (
-        <div className='w-11/12 mx-auto'>
-        <div className="navbar bg-base-100">
+        <div className=' mb-6 sticky top-0 z-50  bg-opacity-10 backdrop-blur-lg shadow-sm'>
+        <div className="navbar w-11/12 mx-auto">
         <div className="navbar-start">
             <div className="dropdown">
             <div tabIndex={0}  className="lg:hidden">

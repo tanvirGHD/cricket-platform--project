@@ -3,7 +3,7 @@ import Selected from './Selected';
 import ModalClose from './ModalClose'; // Import the ModalClose component
 import Modal from './Modal'; // Import the Modal component
 
-const Available = () => {
+const Available = ({ claimHandleToCoin }) => {
     const [allPlayers, setAllPlayers] = useState([]);
     const [selectedPlayers, setSelectedPlayers] = useState([]);
     const [showAvailable, setShowAvailable] = useState(true);
@@ -39,6 +39,10 @@ const Available = () => {
         setDeleteModalOpen(false);
     };
 
+    const handleAvailableClick = () => {
+        setShowAvailable(true);
+    };
+
     return (
         <div className="w-11/12 mx-auto my-10">
             <div className="flex justify-between items-center mb-5">
@@ -49,13 +53,13 @@ const Available = () => {
                 </div>
                 <div>
                     <button 
-                        className={`p-2 border rounded-l-xl ${showAvailable ? 'bg-blue-500 text-white' : ''}`} 
-                        onClick={() => setShowAvailable(true)}
+                        className={`p-2 border rounded-l-xl ${showAvailable ? 'bg-gradient-to-r from-yellow-400 to-pink-500 text-white' : ''}`} 
+                        onClick={handleAvailableClick}
                     >
                         Available
                     </button>
                     <button 
-                        className={`p-2 border rounded-r-xl ${!showAvailable ? 'bg-blue-500 text-white' : ''}`} 
+                        className={`p-2 border rounded-r-xl ${!showAvailable ? 'bg-gradient-to-r from-yellow-400 to-pink-500 text-white' : ''}`} 
                         onClick={() => setShowAvailable(false)}
                     >
                         Selected (<span>{selectedPlayers.length}</span>)
@@ -70,7 +74,7 @@ const Available = () => {
                             <img className="rounded-lg w-full h-[280px]" src={player.player_image} alt={player.player_name} />
                             <div className='flex gap-3 items-center'>
                                 <img className="rounded-full h-11 w-12" src={player.player_image} alt={player.player_name} />
-                                <p>{player.player_name}</p>
+                                <p className='text-2xl font-bold'>{player.player_name}</p>
                             </div>
                             <div className='flex justify-between'>
                                 <div className='flex items-center gap-2'>
@@ -79,6 +83,7 @@ const Available = () => {
                                 </div>
                                 <div><p className='border rounded p-1 font-bold text-gray-600 text-sm'>{player.role}</p></div>
                             </div>
+                            <hr></hr>
                             <p><strong>Rating</strong> {player.rating}</p>
                             <div className='flex justify-between'>
                                 <p><strong>{player.batting_style}</strong></p>
@@ -117,3 +122,13 @@ const Available = () => {
 };
 
 export default Available;
+
+
+
+
+
+
+
+
+
+

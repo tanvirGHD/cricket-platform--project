@@ -1,6 +1,8 @@
-import React from 'react';
+import { useState } from "react";
 
 const Selected = ({ selectedPlayers, handleDeletePlayer }) => {
+    const [showAvailable, setShowAvailable] = useState(true);
+
     return (
         <div className="flex flex-col mt-5">
             <h2></h2>
@@ -24,8 +26,15 @@ const Selected = ({ selectedPlayers, handleDeletePlayer }) => {
                     </div>
                 ))
             )}
+            <button 
+                className={`p-2 border rounded-xl ${showAvailable ? 'bg-gradient-to-r from-yellow-400 to-pink-500 text-white' : ''}`} 
+                onClick={() => setShowAvailable(true)}
+            >
+                Add More Player
+            </button>
+
         </div>
     );
 };
 
-export default Selected;
+export default Selected; 

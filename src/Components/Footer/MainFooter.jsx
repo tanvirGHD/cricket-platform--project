@@ -1,43 +1,53 @@
-// const MainFooter = () => {
-//     return (
-//         <div className="mt-9  relative">
-//             <footer className="footer flex pb-10 justify-around text-white p-10">
-//                 <nav>
-//                     <h6 className="footer-title">Company</h6>
-//                     <a className="link link-hover">About us</a>
-//                     <a className="link link-hover">Contact</a>
-//                     <a className="link link-hover">Jobs</a>
-//                     <a className="link link-hover">Press kit</a>
-//                 </nav>
-//                 <nav>
-//                     <h6 className="footer-title">Legal</h6>
-//                     <a className="link link-hover">Terms of use</a>
-//                     <a className="link link-hover">Privacy policy</a>
-//                     <a className="link link-hover">Cookie policy</a>
-//                 </nav>
+const MainFooter = () => {
+    return (
+        <div className="">
+                        {/* Footer Content */}
+                        <div className="bg-[#06091A] mt-40 pt-44">
+                <div className="footer flex justify-around text-white px-10 pb-5">
+                    {/* About Us Section */}
+                    <div>
+                        <h6 className="text-lg font-semibold  mt-36">About Us</h6>
+                        <p className="mt-3 text-gray-400 max-w-xs">
+                            We are a passionate team dedicated to providing the best services to our customers.
+                        </p>
+                    </div>
 
-//                 <form>
-//                     <h6 className="footer-title">Newsletter</h6>
-//                     <fieldset className="form-control w-80">
-//                         <label className="label">
-//                             <span className="label-text">Enter your email address</span>
-//                         </label>
-//                         <div className="join">
-//                             <input
-//                                 type="text"
-//                                 placeholder="username@site.com"
-//                                 className="input input-bordered join-item"
-//                             />
-//                             <button className="btn btn-primary join-item">Subscribe</button>
-//                         </div>
-//                     </fieldset>
-//                 </form>
-               
-//             </footer>
-//             <hr className="border-t pb-7 border-gray-600" />
-//             <p className="text-white text-center pb-10">@2024 Your Company All Rights Reserved. </p>
-//         </div>
-//     );
-// };
+                    {/* Quick Links Section */}
+                    <nav className="">
+                        <img src="assets/logo-footer.png" alt="" />
+                        <h6 className="text-lg font-semibold">Quick Links</h6>
+                        <ul className="mt-3 space-y-2">
+                            <li className=" text-center"><a className="link link-hover text-gray-400">Home</a></li>
+                            <li className=" text-center"><a className="link link-hover text-gray-400">Services</a></li>
+                            <li className=" text-center"><a className="link link-hover text-gray-400">About</a></li>
+                            <li className=" text-center"><a className="link link-hover text-gray-400">Contact</a></li>
+                        </ul>
+                    </nav>
 
-// export default MainFooter;
+                    {/* Newsletter Subscribe Section */}
+                    <form>
+                        <h6 className="text-lg font-semibold mt-36">Subscribe</h6>
+                        <p className="mt-3 text-gray-400">Subscribe to our newsletter for the latest updates.</p>
+                        <fieldset className="form-control mt-3">
+                            <div className="flex">
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="input input-bordered w-full text-black rounded-l-full"
+                                />
+                                <button className="btn bg-gradient-to-r from-yellow-400 to-pink-500 rounded-r-full text-white font-semibold">Subscribe</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                {/* Divider and Bottom Text */}
+                <hr className="border-t border-gray-600 my-7 mx-10" />
+                <p className="text-center text-gray-400 pb-5">
+                    ©2024 Your Company. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    );
+};
+export default MainFooter;

@@ -27,14 +27,16 @@ const ModalClose = ({ onConfirm, onCancel }) => {
                     {/* <div className="countdown font-mono text-6xl text-center">{counter}</div> */}
                     <div className="flex justify-around mt-5">
                     <div className="flex gap-4 items-center ">
-                        <i className="fa-solid fa-circle-check text-green-600"></i>
+                        <i className="fa-solid fa-circle-check text-red-600"></i>
                         <h3 className="text-center">Player Deleted</h3>
                         </div>
                     </div>
-                    <button onClick={onCancel} className="mt-3 border p-2 rounded">
+                    <div className="flex items-center gap-1">
+                    {/* <button onClick={onCancel} className="mt-3 border p-2 rounded">
                     Close
-                    </button>
+                    </button> */}
                     <progress className="progress w-56 mt-3" ></progress>
+                    </div>
                 </div>
             </div>
         </>
@@ -42,3 +44,14 @@ const ModalClose = ({ onConfirm, onCancel }) => {
 };
 
 export default ModalClose;
+
+
+
+
+
+
+
+
+
+
+

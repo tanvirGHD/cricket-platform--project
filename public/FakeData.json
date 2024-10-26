@@ -1,50 +1,56 @@
 [
     {
       "player_image": "https://i.ibb.co/6y85TWg/images-2.jpg",
-      "player_name": "Player 1",
+      "player_name": "Virat Kohli",
       "batting_style": "Right-Hand Bat",
       "bowling_style": "Right-Arm Off Spin",
+      "role": "Batsman",
       "price": "$1200000",
       "country": "Bangladesh"
     },
     {
       "player_image": "https://i.ibb.co/g7pGJH5/images-1.jpg",
-      "player_name": "Player 2",
+      "player_name": "Tanvir Islam",
       "batting_style": "Left-Hand Bat",
       "bowling_style": "Right-Arm Medium",
+      "role": "Wicketkeeper -Batsman",
       "price": "$1300000",
       "country": "Bangladesh"
     },
     {
       "player_image": "https://i.ibb.co/Pmzb27x/images.jpg",
-      "player_name": "Player 3",
+      "player_name": "Mustafizur Rahman",
       "batting_style": "Right-Hand Bat",
       "bowling_style": "Left-Arm Spin",
       "price": "$1500000",
+      "role": "Baller",
       "country": "Bangladesh"
     },
     {
       "player_image": "https://i.ibb.co/nnMhfYh/download-3.jpg",
-      "player_name": "Player 4",
+      "player_name": "Tamim",
       "batting_style": "Left-Hand Bat",
       "bowling_style": "Right-Arm Fast",
       "price": "$1100000",
+      "role": "Leg spin",
       "country": "Bangladesh"
     },
     {
       "player_image": "https://i.ibb.co/ZMNK9LX/download-2.jpg",
-      "player_name": "Player 5",
+      "player_name": "Taskin Ahmed",
       "batting_style": "Right-Hand Bat",
       "bowling_style": "Right-Arm Fast",
+      "role": "Wicketkeeper -Batsman",
       "price": "$1400000",
       "country": "Bangladesh"
     },
     {
       "player_image": "https://i.ibb.co/z6jpjdb/download.jpg",
-      "player_name": "Player 6",
+      "player_name": "Soumya Sarkar",
       "batting_style": "Left-Hand Bat",
       "bowling_style": "Left-Arm Medium",
       "price": "$1350000",
+      "role": "Batsman",
       "country": "Bangladesh"
     }
   ]
