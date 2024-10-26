@@ -13,9 +13,9 @@ React,
 API
 
 ## 3 key features in project
-Player Marketplace
-Team Management
-Player Price
+Player Marketplace,
+Team Management,
+Player Price,
 
 
 
